@@ -22,6 +22,7 @@ while True:
         HTML_file = open(path, 'rb')
         file_data = HTML_file.read()
         conn.send(file_data)
+        HTML_file.close()
     else:
         conn.send(b'404')
 conn.close()
